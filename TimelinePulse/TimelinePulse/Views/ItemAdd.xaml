@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TimelinePulse.Views.ItemAdd">
+    <StackLayout Margin="20,35,20,20">
+        <Entry x:Name="nameEntry"
+               Placeholder="Enter Description" />
+        <Picker x:Name="pickerStatus"
+                WidthRequest="250"
+                HorizontalOptions="FillAndExpand">
+            <Picker.Items>
+                <x:String>Status Bilgisi</x:String>
+                <x:String>Yüksek Seviye</x:String>
+                <x:String>Orta Seviye</x:String>
+                <x:String>Düşük Seviye</x:String>
+            </Picker.Items>
+            <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            
+        </Picker>
+        <Picker x:Name="pickerCategory"
+                WidthRequest="250"
+                HorizontalOptions="FillAndExpand">
+            <Picker.Items>
+                <x:String>Kategori Bilgisi</x:String>
+                <x:String>İş</x:String>
+                <x:String>Eğlence</x:String>
+                <x:String>Eğitim</x:String>
+                <x:String>Seyehat</x:String>
+                <x:String>Dinlenme</x:String>
+            </Picker.Items>
+            <Picker.SelectedIndex>0</Picker.SelectedIndex>
+
+        </Picker>
+        <DatePicker x:Name="dateTime"/>
+        <TimePicker x:Name="timeSelect"/>
+        <Button Text="Kayıt Ekle"
+                Clicked="OnButtonClicked" />
+    </StackLayout>
+</ContentPage>
